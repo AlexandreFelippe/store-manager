@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const { productsModel } = require('../../../src/models');
 const { productService } = require('../../../src/services');
-const { mockProducts } = require('../../mock/products.mock');
+const { mockProducts } = require('../../mock/productsMock');
 
 describe('PRODUCTS_SERVICES:', function () {
   it('Verifica retorno de getById com sucesso', async function () {
