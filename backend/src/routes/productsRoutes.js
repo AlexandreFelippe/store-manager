@@ -1,6 +1,7 @@
 const route = require('express').Router();
 const { productsModel } = require('../models');
 const { productController } = require('../controllers');
+const validateNewProduct = require('../middlewares/newProduct.middlewares');
 
 route.get('/', async (_req, res) => {
   const products = await productsModel.getAllProducts();
@@ -8,5 +9,7 @@ route.get('/', async (_req, res) => {
 });
 
 route.get('/:id', productController.getProductById);
+
+route.post('/', validateNewProduct, productController.insertNewProduct);
 
 module.exports = route;
