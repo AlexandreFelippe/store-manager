@@ -11,6 +11,12 @@ const mockSales = [
     quantity: 5,
     date: '2023-11-22T12:30:00',
   },
+  {
+    SaleId: 2,
+    productId: 2,
+    quantity: 10,
+    date: '2023-11-23T12:30:00',
+  },
 ];
 
 const mockSale = {
@@ -19,6 +25,11 @@ const mockSale = {
 };
 
 const mockFindSaleWithSuccess = {
+  status: 'SUCCESS',
+  data: mockSales,
+};
+
+const mockFindSaleWithSuccessById = {
   status: 'SUCCESS',
   data: mockSale,
 };
@@ -33,4 +44,5 @@ module.exports = {
   mockSale,
   mockFindSaleWithSuccess,
   mockSaleNotFind,
+  mockFindSaleWithSuccessById,
 };

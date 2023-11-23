@@ -12,7 +12,7 @@ describe('PRODUCTS_CONTROLLER', function () {
   it('Testa se a função getProductsById retorna com SUCCESS', async function () {
     const stub = await sinon.stub(productService, 'getProductById').resolves(mockFindProductWithSuccess);
     const req = {
-      params: { id: 3 },
+      params: {},
       body: {},
     };
     const res = {
