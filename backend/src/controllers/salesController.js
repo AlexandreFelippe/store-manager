@@ -14,7 +14,6 @@ const getSaleById = async (req, res) => {
 
 const createSale = async (req, res) => {
   const sales = req.body;
-  console.log('controller:', sales);
   const { status, data } = await salesService.createSale(sales);
   return res.status(HTTPStatus(status)).json(data);
 };

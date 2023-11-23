@@ -14,7 +14,6 @@ const getSaleById = async (id) => {
 
 const createSale = async (sales) => {
   const data = await salesModel.createSales(sales);
-  console.log('service:', data);
   return { status: 'CREATED', data };
 };
 
