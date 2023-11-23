@@ -23,8 +23,11 @@ const mockFindProductWithSuccess = {
   data: mockProduct,
 };
 
+const insertId = { insertId: 1 };
+
 module.exports = {
   mockProducts,
   mockProduct,
   mockFindProductWithSuccess,
+  insertId,
 };
