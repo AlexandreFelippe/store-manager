@@ -23,7 +23,26 @@ const getSaleById = async (id) => {
   return camelize(sale);
 };
 
+const insertSaleItems = async (insertId, saleItems) => {
+  const saleDetails = await Promise.all(
+    saleItems.map(({ productId, quantity }) => connection.execute(
+      'INSERT INTO sales_products (sale_id, product_id, quantity) VALUES (?, ?, ?)',
+      [insertId, productId, quantity],
+    )),
+  );
+      
+  return saleDetails;
+};
+    
+const createSales = async (sales) => {
+  const [{ insertId }] = await connection.execute('INSERT INTO sales () VALUES ()');
+  await insertSaleItems(insertId, sales);
+  return { id: insertId, itemsSold: sales };
+};
+    
 module.exports = { 
   getAllSales,
   getSaleById,
+  insertSaleItems,
+  createSales,
 };
