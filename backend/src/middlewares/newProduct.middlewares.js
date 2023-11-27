@@ -1,5 +1,4 @@
 const validateNewProduct = (req, res, next) => {
-  console.log('Request Body:', req.body);
   const { name } = req.body;
 
   if (!name || typeof name !== 'string') {

@@ -25,9 +25,21 @@ const mockFindProductWithSuccess = {
 
 const insertId = { insertId: 1 };
 
+const mockUpdateProduct = {
+  id: 1,
+  name: 'Saco de dormir',
+};
+
+const mockUpdateProductWithSuccess = {
+  status: 'SUCCESS',
+  data: mockUpdateProduct,
+};
+
 module.exports = {
   mockProducts,
   mockProduct,
   mockFindProductWithSuccess,
   insertId,
+  mockUpdateProduct,
+  mockUpdateProductWithSuccess,
 };
