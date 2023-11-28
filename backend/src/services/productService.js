@@ -13,7 +13,6 @@ const getProductById = async (productId) => {
 
 const insertNewProduct = async (newProduct) => {
   const { name } = newProduct;
-  console.log('service', name);
   const id = await productModel.insertNewProduct(name);
   return { status: 'CREATED', data: { id, name } };
 };

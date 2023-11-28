@@ -30,9 +30,19 @@ const mockUpdateProduct = {
   name: 'Saco de dormir',
 };
 
+const mockUpdateInvalidName = {
+  id: 1,
+  name: 'Saco',
+};
+
 const mockUpdateProductWithSuccess = {
   status: 'SUCCESS',
   data: mockUpdateProduct,
+};
+
+const mockUpdateProductWithInvalidName = {
+  status: 'INVALID_VALUE',
+  data: { message: '"name" length must be at least 5 characters long' },
 };
 
 module.exports = {
@@ -42,4 +52,6 @@ module.exports = {
   insertId,
   mockUpdateProduct,
   mockUpdateProductWithSuccess,
+  mockUpdateProductWithInvalidName,
+  mockUpdateInvalidName,
 };

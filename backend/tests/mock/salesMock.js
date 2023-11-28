@@ -39,10 +39,42 @@ const mockSaleNotFind = {
   data: { message: 'Sale not found' },
 };
 
+const mockInsertSuccessSale = {
+  status: 'CREATED',
+  data: { id: 4, 
+    itemsSold: [{
+      productId: 1,
+      quantity: 5,
+    },
+    {
+      productId: 2,
+      quantity: 10,
+    }] },
+};
+
+const mockSuccessfulSale = {
+  status: 'CREATED',
+  data: {
+    id: 3,
+    itemsSold: [
+      {
+        productId: 1,
+        quantity: 1,
+      },
+      {
+        productId: 2,
+        quantity: 5,
+      },
+    ],
+  },
+};
+
 module.exports = {
   mockSales,
   mockSale,
   mockFindSaleWithSuccess,
   mockSaleNotFind,
   mockFindSaleWithSuccessById,
+  mockInsertSuccessSale,
+  mockSuccessfulSale,
 };
