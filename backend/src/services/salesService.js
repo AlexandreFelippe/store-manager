@@ -33,7 +33,6 @@ const verifyCreateSaleQuantity = async (sales) => {
     return { status: 'BAD_REQUEST', data: { message: 'Invalid sales data' } };
   }
   const noQuantity = sales.some((sale) => (sale.quantity === undefined));
-  console.log('noQuantity', noQuantity);
   const quantityValue = sales.some((sale) => (sale.quantity <= 0));
   if (noQuantity) return { status: 'BAD_REQUEST', data: { message: '"quantity" is required' } };
   if (quantityValue) {

@@ -37,7 +37,7 @@ const insertSaleItems = async (insertId, saleItems) => {
 const createSales = async (sales) => {
   const [{ insertId }] = await connection.execute('INSERT INTO sales () VALUES ()');
   await insertSaleItems(insertId, sales);
-  return { id: insertId, itemsSold: sales };
+  return insertId;
 };
     
 module.exports = { 
